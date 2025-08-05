@@ -79,8 +79,6 @@ export default function Portfolio() {
     { name: "CSS", level: 95, icon: <FaCode />, category: "Frontend" },
     { name: "JavaScript", level: 85, icon: <FaCode />, category: "Frontend" },
     { name: "C/C++", level: 80, icon: <FaCode />, category: "Programming" },
-    { name: "Node.js", level: 75, icon: <FaCode />, category: "Backend" },
-    { name: "MongoDB", level: 70, icon: <FaDatabase />, category: "Database" },
     { name: "jQuery", level: 85, icon: <FaCode />, category: "Library" },
     { name: "Adobe Photoshop", level: 75, icon: <FaTools />, category: "Design" },
     { name: "MS Word", level: 90, icon: <FaTools />, category: "Office" },
@@ -155,13 +153,13 @@ Tools: WordPress, Adobe Photoshop
             Kuldeep Khelwar
           </motion.div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8  ">
             {["About", "Skills", "Experience", "Education", "Contact"].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 whileHover={{ scale: 1.1 }}
-                className="hover:text-green-400 transition-colors duration-300"
+                className="hover:text-green-400 transition-colors text-gray-500 duration-300"
               >
                 {item}
               </motion.a>
@@ -208,10 +206,9 @@ Tools: WordPress, Adobe Photoshop
               className="flex justify-center space-x-6"
             >
               {[
-                { icon: <FaGithub />, href: "#" },
-                { icon: <FaLinkedin />, href: "#" },
-                { icon: <FaTwitter />, href: "#" },
-                { icon: <FaInstagram />, href: "#" },
+                { icon: <FaGithub />, href: "https://github.com/KuldeepKhelwar" },
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/kuldeep-khelwar-958688311/" },
+                { icon: <FaInstagram />, href: "https://www.instagram.com/_kul_deep_02/" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -268,7 +265,7 @@ Tools: WordPress, Adobe Photoshop
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={downloadCV}
-                    className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-lg transition-all duration-300"
+                    className="fle hidden items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-lg transition-all duration-300"
                   >
                     <FaDownload />
                     <span>Download CV</span>
@@ -361,7 +358,7 @@ Tools: WordPress, Adobe Photoshop
 
             {/* Skills Categories */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {["Frontend", "Backend", "Programming", "Database", "Design", "General"].map(
+              {["Frontend", "CMS", "Programming", "Design", "General"].map(
                 (category, categoryIndex) => (
                   <motion.div
                     key={category}
@@ -421,7 +418,7 @@ Tools: WordPress, Adobe Photoshop
                 {
                   title: "WordPress Developer",
                   company: "EasyPort Logistic's Solution",
-                  duration: "1.6 years",
+                  duration: "2 years",
                   location: "Indore",
                   description: "Developed and maintained WordPress websites.",
                 },
@@ -529,31 +526,34 @@ Tools: WordPress, Adobe Photoshop
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-              Let's Work Together
-            </h2>
-            <p className="text-xl mb-8 text-gray-300">
-              Ready to bring your ideas to life? Let's create something amazing together.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-lg text-lg font-semibold transition-all duration-300"
-            >
-              Get In Touch
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
+ {/* Call to Action */}
+<section className="py-20 px-6">
+  <div className="container mx-auto max-w-4xl text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+        Let's Work Together
+      </h2>
+      <p className="text-xl mb-8 text-gray-500">
+        Ready to bring your ideas to life? Let's create something amazing together.
+      </p>
+      <motion.a
+        href="https://wa.me/919754030206?text=Hi%20Kuldeep,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-lg text-lg font-semibold text-white transition-all duration-300"
+      >
+        Chat on WhatsApp
+      </motion.a>
+    </motion.div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-50/5 dark:bg-green-900/5">
@@ -596,7 +596,7 @@ Tools: WordPress, Adobe Photoshop
                 >
                   <div className="text-3xl text-green-400 mb-4">{contact.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{contact.title}</h3>
-                  <p className="text-gray-300">{contact.info}</p>
+                  <p className="text-gray-500">{contact.info}</p>
                 </motion.div>
               ))}
             </div>
@@ -613,13 +613,12 @@ Tools: WordPress, Adobe Photoshop
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-400 mb-4">© 2024 Kuldeep Khelwar. All rights reserved.</p>
+            <p className="text-gray-500 mb-4">© 2025 Kuldeep Khelwar. All rights reserved.</p>
             <div className="flex justify-center space-x-6">
               {[
-                { icon: <FaGithub />, href: "#" },
-                { icon: <FaLinkedin />, href: "#" },
-                { icon: <FaTwitter />, href: "#" },
-                { icon: <FaInstagram />, href: "#" },
+                { icon: <FaGithub />, href: "https://github.com/KuldeepKhelwar" },
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/kuldeep-khelwar-958688311/" },
+                { icon: <FaInstagram />, href: "https://www.instagram.com/_kul_deep_02/" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
