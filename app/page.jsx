@@ -245,7 +245,7 @@ Tools: WordPress, Adobe Photoshop
                   whileHover={{ scale: 1.05 }}
                   className="w-64 h-64 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-6xl text-white"
                 >
-                  <img src="" alt="Kuldeep Khelwar" className="h-64 w-64 rounded-full"/>
+                  <img src="./kul3.png" alt="Kuldeep Khelwar" className="h-64 w-64 rounded-full"/>
                 </motion.div>
               </div>
               <div>
